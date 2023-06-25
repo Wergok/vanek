@@ -1,0 +1,95 @@
+.questions {
+    padding: $paddingSizePC 0px 0px 0px;
+    background-color: $ColorLightWhite;
+
+    @media (max-width: 769px) {
+
+        & {
+            padding: $paddingSizeTablet 0px 0px 0px;
+        }
+
+    }
+
+    @media (max-width: 426px) {
+
+        & {
+            padding: $paddingSizePhone 0px 0px 0px;
+        }
+
+    }
+
+    &__title {
+        margin: 0px 0px 50px 0px;
+    }
+
+
+    &__details {
+        max-width: 800px;
+        margin: 0 auto;
+        transition: all .9s;
+        box-shadow: rgba($ColorBlack, $alpha: 0.5) 5px 5px 10px;
+        cursor: pointer;
+
+        &[open] .questions__summary {
+            border-bottom: 2px solid $ColorLightBlue !important;
+        }
+
+        &:not(:last-child) .questions__summary {
+            border-bottom: none;
+        }
+
+        &:last-child .questions__answer-box {
+            border-bottom: 2px solid $ColorLightBlue;
+        }
+    }
+
+    &__summary {
+        padding: 20px 10px 20px 10px;
+        border: 2px solid $ColorLightBlue;
+        list-style: none;
+        @extend %StyleTextH5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $ColorDeepGreen;
+        background-color: rgba(#F0F5FE, 1);
+
+        &::after {
+            content: "+";
+            transition: transform .8s, color .8s;
+            font-size: rem(34);
+            transform: rotate(0deg);
+        }
+    }
+
+    &__answer-box {
+        padding: 25px 10px 25px 10px;
+        border-left: 2px solid $ColorLightBlue;
+        border-right: 2px solid $ColorLightBlue;
+    }
+
+    &__answer {
+        @extend %StyleTextBody1;
+        color: $ColorBlack;
+        font-weight: 500;
+    }
+
+    &__answer-item {
+
+        &:not(:last-child) {
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    &__answer-list-text {
+
+        & span {
+            font-weight: 700;
+        }
+    }
+}
+
+.arrow-active::after {
+    transform: rotate(45deg);
+    color: $ColorDeepYellow;
+}

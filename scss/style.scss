@@ -1,0 +1,312 @@
+@import "_var.scss";
+@import "_mixin.scss";
+@import "_templates.scss";
+
+.container {
+    max-width: $widthContainer + 30px;
+    padding: 0px 15px 0px 15px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin: 0px 25px 0px 0px;
+
+        @media (max-width: 1295px) {
+
+            & {
+                margin: 0px 0px 0px 0px;
+            }
+
+        }
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+
+        &:not(:last-child) {
+            margin: 0px 15px 0px 0px;
+        }
+
+
+        @media (max-width: 1295px) {
+
+            & {
+                display: none;
+            }
+
+        }
+
+    }
+
+    &__button {
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+        transition: color .5s;
+
+        @media (min-width: 769px) {
+
+            &:hover {
+                color: $ColorDeepYellow;
+            }
+
+        }
+    }
+}
+
+.logo {
+    @extend %StyleTextH4;
+    color: $ColorDeepGreen;
+    transition: color .5s;
+
+    @media (min-width: 769px) {
+
+        &:hover {
+            color: $ColorDeepYellow;
+        }
+
+    }
+}
+
+.phone {
+    @extend %StyleTextBody1;
+    color: $ColorWhite;
+    transition: color .5s;
+
+    @media (min-width: 769px) {
+
+        &:hover {
+            color: $ColorDeepYellow;
+        }
+
+    }
+}
+
+.title {
+    @extend %StyleTextH2;
+    color: $ColorDeepBlue;
+    text-align: center;
+    transition: all .9s;
+}
+
+.button {
+    @extend %StyleTextBody1;
+    color: $ColorDeepBlue;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    padding: 13px 50px 13px 50px;
+    background-color: $ColorDeepYellow;
+    border-radius: 13px;
+    transition: background-color .5s, color .5s;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        background-color: $ColorDeepGreen;
+        top: 0;
+        transition: all .5s;
+        left: 0;
+    }
+
+    & span {
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (min-width: 769px) {
+
+        &:hover {
+            color: $ColorWhite;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+
+    }
+}
+
+.body--lock {
+    overflow: hidden;
+}
+
+.card-price {
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    transition: all .9s;
+
+    @media (max-width: 986px) {
+
+        & {
+            width: 30%;
+        }
+
+    }
+
+    @media (max-width: 850px) {
+
+        & {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin: 0px 0px 50px 0px;
+        }
+
+    }
+
+    &__top {
+        background-color: $ColorDeepGreen;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 5px 25px 5px;
+        border-top-left-radius: 26px;
+        border-top-right-radius: 26px;
+        flex: 0 0 200px;
+
+        @media (max-width: 850px) {
+
+            & {
+                flex: 0 0 100px
+            }
+
+        }
+    }
+
+    &__title {
+        @extend %StyleTextH4;
+        color: $ColorWhite;
+        text-align: center;
+
+        @media (max-width: 475px) {
+
+            & {
+                font-size: rem(20);
+                line-height: interest(32, 20);
+            }
+
+        }
+    }
+
+    &__cost {
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+        text-align: center;
+    }
+
+    &__inner {
+        padding: 25px 20px 25px 20px;
+        background-color: $ColorLightBlue;
+        border-bottom-left-radius: 26px;
+        border-bottom-right-radius: 26px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__instruction {
+        flex: 1 1;
+        margin: 0px 0px 25px 0px;
+
+        @media (max-width: 850px) {
+
+            & {
+                margin: 0px auto 25px auto;
+            }
+
+        }
+    }
+
+    &__instruction-item {
+
+        &:not(:last-child) {
+            margin: 0px 0px 5px 0px;
+        }
+    }
+
+    &__text {
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+        padding: 0px 0px 0px 30px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 5%;
+            left: 0;
+            background-image: url("../blocks/price/images/Check.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__button {
+
+        @media (max-width: 850px) {
+
+            & {
+                width: 200px;
+                margin: 0 auto;
+            }
+
+        }
+    }
+}
+
+.animation-active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.animation-disable {
+    transform: translate(0, -50px);
+    opacity: 0;
+}
+
+.wrapper::after {
+    content: "";
+    background: rgba($ColorBlack, $alpha: 0.5) url("../blocks/consultation/images/loader.svg") center no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3000;
+}
+
+.wrapper.loading-body::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+@import "../blocks/header/scss/_header.scss";
+@import "../blocks/burger/scss/_burger.scss";
+@import "../blocks/main-page/scss/_main-page.scss";
+@import "../blocks/benefits/scss/_benefits.scss";
+@import "../blocks/price/scss/_price.scss";
+@import "../blocks/mistake/scss/_mistake.scss";
+@import "../blocks/questions/scss/_questions.scss";
+@import "../blocks/consultation/scss/_consultation.scss";
+@import "../blocks/portfolio/scss/_portfolio.scss";
+@import "../blocks/footer/scss/_footer.scss";

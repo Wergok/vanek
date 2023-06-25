@@ -1,0 +1,30 @@
+.price {
+    padding: $paddingSizePC 0px 0px 0px;
+
+    @media (max-width: 769px) {
+
+        & {
+            padding: $paddingSizeTablet 0px 0px 0px;
+        }
+
+    }
+
+    @media (max-width: 426px) {
+
+        & {
+            padding: $paddingSizePhone 0px 0px 0px;
+        }
+
+    }
+
+    &__title {
+        margin: 0px 0px 50px 0px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-content: stretch;
+        flex-wrap: wrap;
+    }
+}

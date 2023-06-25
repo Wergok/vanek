@@ -1,0 +1,122 @@
+.consultation {
+    padding: 35px 0px 35px 0px;
+    margin-top: 50px;
+    background-image: url("../blocks/consultation/images/background.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @media (max-width: 769px) {
+    
+        & {
+            background-attachment: local;
+        }
+    
+    }
+
+    @media (max-width: 769px) {
+
+        & {
+            padding: 30px 0px 35px 0px;
+        }
+
+    }
+
+    @media (max-width: 426px) {
+
+        & {
+            padding: $paddingSizePhone 0px 20px 0px;
+        }
+
+    }
+
+    &__title {
+        color: $ColorBlack;
+        margin: 0px 0px 50px 0px;
+
+        @media (max-width: 600px) {
+        
+            & {
+                margin: 0px 0px 30px 0px;
+            }
+        
+        }
+    }
+
+    &__form {
+        margin: 0 auto 25px auto;
+        max-width: 500px;
+        transition: all .9s;
+        text-align: center;
+        background-color: rgba($ColorDeepPurple, $alpha: 0.3);
+        padding: 50px 50px 25px 50px;
+        border-radius: 20px;
+
+        @media (max-width: 600px) {
+        
+            & {
+                padding: 30px 30px 25px 30px;
+            }
+        
+        }
+    }
+
+    &__input-box {
+        margin: 0px 0px 15px 0px;
+
+        &:nth-child(3) {
+            margin: 0px 0px 35px 0px;
+        }
+    }
+
+    &__label {
+        @extend %StyleTextLabel;
+        color: $ColorWhite;
+        display: block;
+        margin: 0px 0px 5px 0px;
+    }
+
+    &__input-wrapper {
+        background-color: $ColorWhite;
+        border: 2px $ColorDeepBlue;
+        box-shadow: inset rgba($color: #000000, $alpha: 0.5) 5px 5px 5px;
+    }
+
+    &__input {
+        width: 100%;
+        @extend %StyleTextLabel;
+        color: $ColorBlack;
+        padding: 15px 0px 15px 0px;
+        margin: 0px 0px 0px 15px;
+        background-color: transparent;
+        outline: none;
+    }
+
+    &__slogan {
+        @extend %StyleTextH2;
+        font-family: $additionalFont;
+        display: block;
+        color: $ColorWhite;
+        text-align: center;
+        transition: all .9s;
+
+        @media (max-width: 654px) {
+
+            & {
+                font-size: rem(28);
+                line-height: interest(36, 28);
+            }
+
+        }
+
+        @media (max-width: 512px) {
+
+            & {
+                font-size: rem(24);
+                line-height: interest(32, 24);
+            }
+
+        }
+    }
+}
