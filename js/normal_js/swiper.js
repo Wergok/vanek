@@ -25,10 +25,10 @@ const partnersSwiper = new Swiper(".partners__swiper", {
         type: "bullets",
     },
 
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
 
     keyboard: {
         enabled: true,
@@ -57,11 +57,6 @@ const certificatesSwiper = new Swiper(".certificates__swiper", {
         el: ".certificates__swiper-pagination",
         type: "bullets",
     },
-
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
 
     keyboard: {
         enabled: true,

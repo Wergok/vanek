@@ -44,11 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formInputs = form.querySelectorAll(".consultation__input");
 
         for (const input of formInputs) {
-            console.log(input);
             if (input.classList.contains("email")) {
-                console.log(!input.validity.patternMismatch);
-                console.log(!input.value.valueMissin);
-
                 if (
                     !input.validity.patternMismatch &&
                     !input.validity.valueMissin
