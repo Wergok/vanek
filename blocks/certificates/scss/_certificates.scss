@@ -1,0 +1,52 @@
+.certificates {
+
+   padding: $paddingSizePC 0px 0px 0px;
+
+   @media (max-width: 769px) {
+
+      & {
+         padding: $paddingSizeTablet 0px 0px 0px;
+      }
+
+   }
+
+   @media (max-width: 426px) {
+
+      & {
+         padding: $paddingSizePhone 0px 0px 0px;
+      }
+
+   }
+
+   &__title {
+      margin: 0px 0px 50px 0px;
+      transition: all .9s;
+   }
+
+   &__swiper-slide {
+      cursor: pointer;
+      display: flex;
+      max-height: 300px;
+   }
+
+   &__swiper-slide-box {
+      display: flex;
+      flex: 0 0 100%;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__image {
+      width: 270px;
+      height: auto;
+   }
+
+   &__swiper-pagination {
+      text-align: center;
+      margin: 20px 0px 0px 0px;
+
+      & .swiper-pagination-bullet-active {
+         background-color: $ColorDeepGreen;
+      }
+   }
+}

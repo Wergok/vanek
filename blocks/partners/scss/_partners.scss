@@ -1,4 +1,4 @@
-.portfolio {
+.partners {
     padding: $paddingSizePC 0px 0px 0px;
 
     @media (max-width: 769px) {
@@ -41,6 +41,7 @@
 
     &__swiper-pagination {
         text-align: center;
+        margin: 20px 0px 0px 0px;
 
         & .swiper-pagination-bullet-active {
             background-color: $ColorDeepGreen;
